@@ -1,0 +1,32 @@
+/* Small custom styles to complement Tailwind for better polish */
+
+:root{
+  --glass: rgba(255,255,255,0.03);
+}
+
+/* Improve image fallback and ratio */
+img {
+  display: block;
+}
+
+/* Tiny focus ring improvement for accessibility */
+input:focus, textarea:focus, button:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(139,92,246,0.12);
+  border-color: rgba(139,92,246,0.6);
+}
+
+/* Slight card hover effect */
+.project-card-hover:hover {
+  transform: translateY(-6px);
+  transition: transform .25s ease;
+}
+
+/* If user has no profile image, show a neutral background */
+.no-image {
+  background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(110,231,183,0.02));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+}

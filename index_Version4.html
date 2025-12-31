@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sudhanshu Mishra — Portfolio</title>
+  <meta name="description" content="Portfolio of Sudhanshu Mishra — intermediate student focused on front-end development." />
+
+  <!-- Tailwind Play CDN with inline config for dark-pastel palette -->
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'bg-dark': '#0b1020',        /* deep navy */
+            'card-dark': '#0f1724',      /* card background */
+            'pastel-lavender': '#b793ff',
+            'pastel-teal': '#6ee7b7',
+            'pastel-rose': '#ffb4c2',
+            'accent': '#8b5cf6'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'Segoe UI', 'Helvetica', 'Arial']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-bg-dark text-gray-100 antialiased">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-gradient-to-b from-black/40 to-transparent backdrop-blur-sm border-b border-white/5">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-md bg-gradient-to-br from-pastel-lavender to-pastel-teal flex items-center justify-center font-semibold text-bg-dark">SM</div>
+        <div>
+          <h1 id="name" class="text-sm font-semibold">Sudhanshu Mishra</h1>
+          <p class="text-xs text-gray-400">Intermediate Student • Front‑end Enthusiast</p>
+        </div>
+      </div>
+
+      <nav id="nav" class="ml-auto hidden md:flex gap-4 items-center">
+        <a class="text-sm text-gray-200 hover:text-white" href="#about">About</a>
+        <a class="text-sm text-gray-200 hover:text-white" href="#skills">Skills</a>
+        <a class="text-sm text-gray-200 hover:text-white" href="#projects">Projects</a>
+        <a class="text-sm text-gray-200 hover:text-white" href="#contact">Contact</a>
+        <a class="ml-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-gradient-to-r from-pastel-lavender to-accent text-bg-dark text-sm font-medium" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="menu-btn" aria-label="Toggle menu" class="md:hidden ml-auto text-gray-200">
+        <svg id="menu-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+        <svg id="menu-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobile-nav" class="md:hidden hidden px-6 pb-4">
+      <nav class="flex flex-col gap-2">
+        <a class="px-3 py-2 rounded-md text-gray-200 hover:bg-white/5" href="#about">About</a>
+        <a class="px-3 py-2 rounded-md text-gray-200 hover:bg-white/5" href="#skills">Skills</a>
+        <a class="px-3 py-2 rounded-md text-gray-200 hover:bg-white/5" href="#projects">Projects</a>
+        <a class="px-3 py-2 rounded-md text-gray-200 hover:bg-white/5" href="#contact">Contact</a>
+        <a class="mt-2 inline-block px-3 py-2 rounded-md bg-gradient-to-r from-pastel-lavender to-accent text-bg-dark text-center" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-5xl mx-auto px-6 py-10">
+    <!-- Hero -->
+    <section class="grid md:grid-cols-2 gap-8 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-3xl font-semibold leading-tight">Hello — I am <span class="text-pastel-lavender">Sudhanshu Mishra</span></h2>
+        <p class="mt-4 text-gray-300 max-w-xl">I am an intermediate student with a focus on front-end development. I create accessible, responsive interfaces using modern HTML, CSS and JavaScript. I take a pragmatic approach to building user interfaces that are clean, performant and maintainable.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-gradient-to-r from-pastel-teal to-pastel-lavender text-bg-dark font-medium shadow hover:scale-[1.01] transition">View Projects</a>
+          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-white/10 text-gray-200 hover:bg-white/2 transition">Contact</a>
+        </div>
+
+        <div class="mt-6 flex gap-3 text-sm text-gray-400">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-pastel-teal" viewBox="0 0 24 24" fill="currentColor"><path d="M2 5.75C2 4.78 2.78 4 3.75 4h16.5c.97 0 1.75.78 1.75 1.75V18.25C22 19.22 21.22 20 20.25 20H3.75A1.75 1.75 0 012 18.25V5.75zM3.25 6.6l8.75 5.25 8.75-5.25V6h-17.5v.6z"/></svg>
+            <span>youremail@example.com (edit in index.html)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-center md:justify-end" data-aos="fade-left">
+        <div class="w-64 rounded-xl overflow-hidden bg-card-dark border border-white/5 shadow-lg">
+          <!-- Replace assets/profile.jpg with your photo -->
+          <img src="assets/profile.jpg" alt="Portrait of Sudhanshu Mishra" class="w-full h-64 object-cover grayscale/10" />
+          <div class="p-4 bg-gradient-to-t from-black/30 to-transparent">
+            <h3 class="text-lg font-semibold">Sudhanshu Mishra</h3>
+            <p class="text-sm text-gray-400 mt-1">Front‑end Developer (Intermediate)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="mt-12" data-aos="fade-up">
+      <h3 class="text-xl font-semibold mb-3">About</h3>
+      <p class="text-gray-300 max-w-3xl">I specialize in building clear and performant front-end experiences. I am learning advanced JavaScript and modern tooling while practicing best practices for accessibility and responsive design. I approach projects with attention to detail and an emphasis on maintainability.</p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="mt-10 grid md:grid-cols-2 gap-6">
+      <div data-aos="fade-right">
+        <h3 class="text-xl font-semibold mb-3">Technical Skills</h3>
+        <ul class="grid grid-cols-2 gap-2 text-sm text-gray-300">
+          <li class="px-3 py-2 bg-card-dark rounded-md border border-white/5">HTML</li>
+          <li class="px-3 py-2 bg-card-dark rounded-md border border-white/5">CSS / Tailwind</li>
+          <li class="px-3 py-2 bg-card-dark rounded-md border border-white/5">JavaScript (ES6+)</li>
+          <li class="px-3 py-2 bg-card-dark rounded-md border border-white/5">Git & GitHub</li>
+          <li class="px-3 py-2 bg-card-dark rounded-md border border-white/5">Responsive Design</li>
+          <li class="px-3 py-2 bg-card-dark rounded-md border border-white/5">Accessibility Basics</li>
+        </ul>
+      </div>
+
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-semibold mb-3">Tools & Concepts</h3>
+        <div class="space-y-3 text-gray-300">
+          <p class="text-sm"><strong>Design:</strong> Figma (basic)</p>
+          <p class="text-sm"><strong>Deployment:</strong> GitHub Pages, Netlify</p>
+          <p class="text-sm"><strong>Approach:</strong> Component-first structure, semantic HTML, progressive enhancement</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="mt-12" data-aos="fade-up">
+      <h3 class="text-xl font-semibold mb-4">Selected Projects</h3>
+      <p class="text-gray-400 mb-4">Replace these placeholders with your project titles, descriptions, and links.</p>
+
+      <div class="grid md:grid-cols-3 gap-4">
+        <article class="p-4 bg-card-dark rounded-xl border border-white/5 shadow-sm" data-aos="zoom-in" data-aos-delay="50">
+          <h4 class="font-semibold">Portfolio Website</h4>
+          <p class="text-sm text-gray-300 mt-2">A responsive portfolio site demonstrating layout, animations and accessibility best practices.</p>
+          <div class="mt-3 flex gap-2">
+            <a class="text-pastel-lavender text-sm font-medium" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="text-pastel-teal text-sm font-medium" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+
+        <article class="p-4 bg-card-dark rounded-xl border border-white/5 shadow-sm" data-aos="zoom-in" data-aos-delay="100">
+          <h4 class="font-semibold">Todo App</h4>
+          <p class="text-sm text-gray-300 mt-2">A small JavaScript application implementing task management and localStorage persistence.</p>
+          <div class="mt-3 flex gap-2">
+            <a class="text-pastel-lavender text-sm font-medium" href="#" target="_blank" rel="noopener">Live</a>
+            <a class="text-pastel-teal text-sm font-medium" href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+
+        <article class="p-4 bg-card-dark rounded-xl border border-white/5 shadow-sm" data-aos="zoom-in" data-aos-delay="150">
+          <h4 class="font-semibold">School Project</h4>
+          <p class="text-sm text-gray-300 mt-2">An overview and explanation of a collaborative project (describe your role and technologies used).</p>
+          <div class="mt-3 flex gap-2">
+            <a class="text-pastel-lavender text-sm font-medium" href="#" target="_blank" rel="noopener">Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-12" data-aos="fade-up">
+      <h3 class="text-xl font-semibold mb-3">Contact</h3>
+      <p class="text-gray-300 mb-4">I welcome polite, concise messages about collaboration, mentorship, or questions regarding my work.</p>
+
+      <!-- Contact form: set action to your Formspree endpoint (or use JS to submit) -->
+      <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl" method="POST" data-formspree>
+        <div class="col-span-1">
+          <label class="block text-sm text-gray-200 mb-1" for="name">Name</label>
+          <input id="name-field" name="name" required class="w-full px-3 py-2 rounded-md bg-[#0b1220] border border-white/5 focus:outline-none focus:ring-2 focus:ring-pastel-lavender" placeholder="Your full name" />
+        </div>
+
+        <div class="col-span-1">
+          <label class="block text-sm text-gray-200 mb-1" for="email">Email</label>
+          <input id="email-field" name="email" type="email" required class="w-full px-3 py-2 rounded-md bg-[#0b1220] border border-white/5 focus:outline-none focus:ring-2 focus:ring-pastel-teal" placeholder="you@example.com" />
+        </div>
+
+        <div class="col-span-1 md:col-span-2">
+          <label class="block text-sm text-gray-200 mb-1" for="message">Message</label>
+          <textarea id="message-field" name="message" rows="6" required class="w-full px-3 py-2 rounded-md bg-[#0b1220] border border-white/5 focus:outline-none focus:ring-2 focus:ring-pastel-rose" placeholder="Short message"></textarea>
+        </div>
+
+        <div class="col-span-1 md:col-span-2 flex items-center gap-3">
+          <button type="submit" class="px-4 py-2 rounded-md bg-gradient-to-r from-pastel-lavender to-accent text-bg-dark font-medium shadow">Send message</button>
+          <div id="form-status" class="text-sm text-gray-300"></div>
+        </div>
+      </form>
+
+      <p class="mt-4 text-sm text-gray-400">Or email me directly: <a id="direct-email" class="text-pastel-teal" href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p class="mt-2 text-xs text-gray-500">Note: To receive messages, set the contact form action to your Formspree endpoint (see README) or configure EmailJS.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/5 mt-12">
+    <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between text-sm text-gray-400">
+      <div>© <span id="year"></span> Sudhanshu Mishra</div>
+      <div class="flex gap-3">
+        <a class="text-gray-400 hover:text-white" href="https://github.com/Sudhanshu271" target="_blank" rel="noopener">GitHub</a>
+        <a class="text-gray-400 hover:text-white" href="#" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js" defer></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+  </script>
+</body>
+</html>
